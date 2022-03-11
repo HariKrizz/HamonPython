@@ -21,7 +21,6 @@ def test_word_count_Multiple():
     ret = wordCount("abcd 1234 wxyz 5678")
     assert ret == 3
 
-
 def test_sentence_count_None():
     ret = sentenceCount("abcd1234hello")
     assert ret == 0
@@ -33,16 +32,5 @@ def test_sentence_count_Multiple():
 def test_ari_calculate_score_greater14():
     ret = autoreadIndex_Calculate("Hello! How are you?") > 14
     assert ret == True
-
-def test_ari_calculate_score14_orless():
-    ret = autoreadIndex_Calculate("Hello! How are you?") <= 14
-    assert ret == False
-
-
-
-
-
-    
-    
 
 
