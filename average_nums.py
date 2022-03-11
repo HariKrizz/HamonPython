@@ -1,15 +1,11 @@
 
-def AverageofList(arr):
-
-    sum = 0
-
-    for i in arr:
-        sum +=  i
-        avg = sum/len(arr)
-
-    if len(arr) != 0:
-        return avg
-    else: 
+def average(arr):
+    s = 0
+    if not arr:
         return None
-       
-print(AverageofList([5])) 
+    for i in arr:
+        s +=  i
+    avg = s/len(arr)
+    return avg
+if __name__ == '__main__':
+    print(average([1,2,3,4,5]))
