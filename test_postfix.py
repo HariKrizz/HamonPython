@@ -7,8 +7,13 @@ def test_postfix_empty():
 
 def test_postfix_expression_valid():
     ret = postfix_calc("123++")
-    assert ret == 6
+    assert ret == [6]
 
-def test_postfix_expression_string():
-    ret = postfix_calc("abc++")
-    assert ret == None
+def test_postfix_expression_alnum():
+    ret = postfix_calc("123abc++")
+    assert ret == [6]
+
+def test_postfix_expression_alpha_or_spl():
+    ret = postfix_calc("abc+!@")
+    assert ret == []
+

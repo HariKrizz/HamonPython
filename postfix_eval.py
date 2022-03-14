@@ -1,26 +1,38 @@
 
 def postfix_calc(expr):
-    nums = []   
+    nums = [] 
+   
     if not len(expr):
         return None
-    else:
-        for i in expr:   
-            if i.isdigit(): 
-                nums.append(int(i))
-            else:
-                n1 = nums.pop()
-                n2 = nums.pop()
-                if i == '+': 
-                    nums.append(n1 + n2)
-                elif i == '-': 
-                    nums.append(n1 - n2)
-                elif i == '*':
-                    nums.append(n1 * n2)
-                elif i == '/': 
-                    nums.append(n1 / n2)       
-        return nums.pop()
-    
 
+    for i in expr:   
+        if i.isdigit(): 
+            nums.append(int(i))
+
+        elif expr.isalpha(): 
+            return None
+        
+        elif i == '+': 
+            n1 = nums.pop()
+            n2 = nums.pop()
+            nums.append(n1 + n2)
+
+        elif i == '-': 
+            n1 = nums.pop()
+            n2 = nums.pop()
+            nums.append(n1 - n2)
+
+        elif i == '*':
+            n1 = nums.pop()
+            n2 = nums.pop()
+            nums.append(n1 * n2)
+            
+        elif i == '/': 
+            n1 = nums.pop()
+            n2 = nums.pop()
+            nums.append(n1 / n2)  
+    return nums
+    
 if __name__ == '__main__':
-    expr = "123++"  
+    expr = "123abc++"  
     print(postfix_calc(expr))     
