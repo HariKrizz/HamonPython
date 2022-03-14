@@ -20,7 +20,7 @@ def postfix_calc(expr):
         elif i == '-': 
             n1 = nums.pop()
             n2 = nums.pop()
-            nums.append(n1 - n2)
+            nums.append(n2 - n1)
 
         elif i == '*':
             n1 = nums.pop()
