@@ -14,6 +14,6 @@ def test_postfix_expression_alnum():
     assert ret == [6]
 
 def test_postfix_expression_alpha_or_spl():
-    ret = postfix_calc("abc+!@")
+    ret = postfix_calc("abc!@")
     assert ret == []
 
