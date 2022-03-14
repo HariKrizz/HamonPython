@@ -33,4 +33,13 @@ def test_ari_calculate_score_greater14():
     ret = autoreadIndex_Calculate("Hello! How are you?") > 14
     assert ret == True
 
+def test_ari_calculate_index():
+    ret = autoreadIndex_Calculate("Hello! How are you?")
+    assert ret == autoreadIndex_Calculate()
+
+def dictINdex():
+    ret = autoreadIndex_Calculate("Hello! How are you?")
+    assert ret == autoreadIndex_Calculate(dict)
+
+
 

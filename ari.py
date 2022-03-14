@@ -60,5 +60,6 @@ if __name__ == '__main__':
     print(charCount(string))
     print(wordCount(string))
     print(sentenceCount(string))
-    print(autoreadIndex_Calculate(string))
+    print((string))
+
 
