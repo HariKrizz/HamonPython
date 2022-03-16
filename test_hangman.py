@@ -61,26 +61,26 @@ def test_game_status_not_guessed():
     Remaining Turns:8
     """
  
-# def test_create_status_normal():
-#     secret_word = "elephant"
-#     guesses = ["a", "x", "h"]
-#     remaining_turns = 7
-#     ret = hangman.game_status(secret_word, guesses, remaining_turns)
-#     assert ret == """Word:----ha--
-#     Guesses:a x h
-#     Remaining Turns:7
-#     """
+def test_create_status_normal():
+    secret_word = "elephant"
+    guesses = ["a", "x", "h"]
+    remaining_turns = 7
+    ret = hangman.game_status(secret_word, guesses, remaining_turns)
+    assert ret == """Word:----ha--
+    Guesses:a x h
+    Remaining Turns:7
+    """
 
-# def test_play_correct_guess():
-#     secret_word = "computer"
-#     guesses = []
-#     remaining_turns = 8
-#     guess = "e"
-#     remaining_turns, repeat, finished = hangman.play_round(secret_word, guesses, guess, remaining_turns)
-#     assert guesses == ["e"]
-#     assert remaining_turns == 8
-#     assert repeat == False
-#     assert finished == False
+def test_play_correct_guess():
+    secret_word = "computer"
+    guesses = []
+    remaining_turns = 8
+    guess = "e"
+    remaining_turns, repeat, finished = hangman.play_round(secret_word, guesses, guess, remaining_turns)
+    assert guesses == ["e"]
+    assert remaining_turns == 8
+    assert repeat == False
+    assert finished == False
 
 # def test_play_round_correct_repeat():
 #     secret_word = "nvidia"
