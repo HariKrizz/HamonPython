@@ -104,10 +104,10 @@ def test_play_round_correct_wrong():
     assert repeat == False
     assert finished == False
 
-# def test_play_round_correct_complete():
-#     secret_word = "thunder"
-#     guesses = ["t", "h", "u", "n", "d","e","r"]
-#     remaining_turns = 7
-#     guess = ""
-#     remaining_turns, repeat, finished = hangman.play_round(secret_word, guesses, guess, remaining_turns)
-#     assert finished == True
+def test_play_round_correct_complete():
+    secret_word = "thunder"
+    guesses = ["t", "h", "u", "n", "d","e","r"]
+    remaining_turns = 7
+    guess = ""
+    remaining_turns,finished = hangman.play_round(secret_word, guesses, guess, remaining_turns)
+    assert finished == True
