@@ -34,5 +34,5 @@ def postfix_calc(expr):
     return nums
 
 if __name__ == '__main__':
-    expr = "acd"  
+    expr = "+-*/*"  
     print(postfix_calc(expr))     

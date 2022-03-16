@@ -17,5 +17,9 @@ def test_postfix_expression_alpha_or_spl():
     ret = postfix_calc("abc!@")
     assert ret == []
 
+def test_postfix_expression_operators():
+    ret = postfix_calc("+-*//*-")
+    assert ret == None
+
 
 
