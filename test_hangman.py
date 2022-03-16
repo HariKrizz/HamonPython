@@ -45,21 +45,21 @@ def test_mask_word_mulitple_letter():
     ret =hangman.mask_word(secret_word,guesses)
     assert ret == "e-e-----"
 
-# def test_mask_word_mix_letter():
-#     secret_word = "elephant"
-#     guesses= ["e","l","y"]
-#     ret =hangman.mask_word(secret_word,guesses)
-#     assert ret == "ele-----"
+def test_mask_word_mix_letter():
+    secret_word = "elephant"
+    guesses= ["e","l","y"]
+    ret =hangman.mask_word(secret_word,guesses)
+    assert ret == "ele-----"
 
-# def test_game_status_not_guessed():
-#     secret_word = "elephant"
-#     guesses = []
-#     remaining_turns = 8
-#     status = hangman.game_status(secret_word, guesses, remaining_turns)
-#     assert status == """Word:--------
-#     Guesses:
-#     Remaining Turns:8
-#     """
+def test_game_status_not_guessed():
+    secret_word = "elephant"
+    guesses = []
+    remaining_turns = 8
+    status = hangman.game_status(secret_word, guesses, remaining_turns)
+    assert status == """Word:--------
+    Guesses:
+    Remaining Turns:8
+    """
  
 # def test_create_status_normal():
 #     secret_word = "elephant"
